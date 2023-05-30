@@ -1,7 +1,17 @@
+const UserSchema = require('../models/UserSchema');
+
 class ApiController {
     //[GET] getAllUser
-    getAllUser(req, res, next) {
-        res.json({ message: 'hello' });
+    async getAllUser(req, res, next) {
+        try {
+            const user = await UserSchema.find({});
+
+            if (!user) return;
+
+            res.json({ message: 'Successfully!!!', status: true, user });
+        } catch (error) {
+            return res.json({ message: 'Fail!!!', status: false, error });
+        }
     }
 }
 

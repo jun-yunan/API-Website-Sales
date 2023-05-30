@@ -4,8 +4,10 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const route = require('./routes');
 const handlebars = require('express-handlebars').engine;
+const database = require('./database');
 
 const app = express();
+database.connect();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json({ limit: '50mb' }));
