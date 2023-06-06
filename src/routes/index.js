@@ -1,8 +1,8 @@
-const apiRouter = require('./api');
+const usersRouter = require('./users');
 const siteRouter = require('./site');
 
 function route(app) {
-    app.use('/api', apiRouter);
+    app.use('/api', usersRouter);
     app.use('/', siteRouter);
 }
 

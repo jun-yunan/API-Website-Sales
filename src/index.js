@@ -2,13 +2,14 @@ const express = require('express');
 require('dotenv').config();
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 const route = require('./routes');
 const handlebars = require('express-handlebars').engine;
-const database = require('./database');
+const database = require('./config/databaseConfig');
 
 const app = express();
+app.use(cors());
 database.connect();
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
