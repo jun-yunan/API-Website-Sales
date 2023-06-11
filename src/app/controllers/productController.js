@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const ProductSchema = require('../models/ProductSchema');
 
-class productController {
+class ProductController {
     async getProducts(req, res, next) {
         try {
             const { page, limit } = req.query;
@@ -24,4 +24,4 @@ class productController {
     }
 }
 
-module.exports = new productController();
+module.exports = new ProductController();
