@@ -3,8 +3,7 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
-// const route = require('./routes');
-const route = require('./routes');
+const route = require('./routes/index');
 const handlebars = require('express-handlebars').engine;
 const database = require('./config/databaseConfig');
 
