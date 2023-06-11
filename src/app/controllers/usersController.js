@@ -121,7 +121,7 @@ class UserController {
 
     //[GET] /getUserById/:id
     getUserById(req, res, next) {
-        return res.json({});
+        return res.json({ message: 'fdsfsdf' });
     }
 }
 

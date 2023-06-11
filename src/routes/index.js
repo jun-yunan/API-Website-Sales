@@ -4,7 +4,7 @@ const productsRouter = require('../routes/products');
 
 function route(app) {
     app.use('/api', usersRouter);
-    // app.use('/api', productsRouter);
+    app.use('/api', productsRouter);
     app.use('/', siteRouter);
 }
 
