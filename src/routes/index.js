@@ -1,6 +1,6 @@
-const usersRouter = require('./users');
-const siteRouter = require('./site');
-const productsRouter = require('./products');
+const usersRouter = require('../routes/users');
+const siteRouter = require('../routes/site');
+const productsRouter = require('../routes/products');
 
 function route(app) {
     app.use('/api', usersRouter);
