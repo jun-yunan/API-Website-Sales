@@ -8,6 +8,7 @@ const handlebars = require('express-handlebars').engine;
 const database = require('./config/databaseConfig');
 
 const app = express();
+route(app);
 app.use(cors());
 database.connect();
 app.use(express.static(path.join(__dirname, 'public')));
@@ -22,8 +23,6 @@ app.engine(
 );
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources', 'views'));
-
-route(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
