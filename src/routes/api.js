@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+// const productController = require('../app/controllers/ProductController');
 const productController = require('../app/controllers/ProductController');
-const usersController = require('../app/controllers/UserController');
+const userController = require('../app/controllers/UserController');
 
 const userAuthenticationMiddleware = require('../app/middleware/userAuthenticationMiddleware');
 
@@ -10,11 +11,11 @@ const userAuthenticationMiddleware = require('../app/middleware/userAuthenticati
 router.get(
     '/getAllUser',
     // userAuthenticationMiddleware,
-    usersController.getAllUser,
+    userController.getAllUser,
 );
-router.post('/signup', usersController.signup);
-router.post('/signIn', usersController.signIn);
-router.get('/getUser/:id', usersController.getUserById);
+router.post('/signup', userController.signup);
+router.post('/signIn', userController.signIn);
+router.get('/getUser/:id', userController.getUserById);
 
 // PRODUCT
 
