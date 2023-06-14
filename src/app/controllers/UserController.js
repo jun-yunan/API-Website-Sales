@@ -1,8 +1,7 @@
 const UserSchema = require('../models/UserSchema');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
-const { signJwtAccessToken, verifyJwt } = require('../../config/authConfig');
-var jwt = require('jsonwebtoken');
+const { signJwtAccessToken } = require('../../config/authConfig');
 
 class UserController {
     //[GET] getAllUser
