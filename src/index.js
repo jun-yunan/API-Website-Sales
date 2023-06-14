@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, 'resources', 'views'));
 
 route(app);
 
-const port = process.env.PORT || 5500;
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });
